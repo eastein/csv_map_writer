@@ -26,7 +26,7 @@ if __name__ == '__main__' :
 
 	for row in csv.DictReader(open(sys.argv[1])) :
 		polyid = long(row['Polygon Id'])
-		x = (float(row['X']) - max_x) * mult
+		x = (float(row['X']) - min_x) * mult
 		y = (float(row['Y']) - min_y) * mult
 
 		polys.setdefault(polyid, list())
