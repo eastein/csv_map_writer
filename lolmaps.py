@@ -3,6 +3,11 @@ import csv
 import sys
 import math
 
+def poly_id(row) :
+	#return row['Polygon Id']
+	#return row['Part Id']
+	return row['Polygon Id'] + '.' + row['Part Id']
+
 if __name__ == '__main__' :
 	polys = {}
 	max_x = 0.0
@@ -12,7 +17,7 @@ if __name__ == '__main__' :
 
 	mult = 0.00000663790307274524
 	for row in csv.DictReader(open(sys.argv[1])) :
-		polyid = long(row['Polygon Id'])
+		polyid = poly_id(row)
 		x = float(row['X'])
 		y = float(row['Y'])
 		max_x = max(max_x, x)
@@ -25,7 +30,7 @@ if __name__ == '__main__' :
 	mult = 8.0 / w_x
 
 	for row in csv.DictReader(open(sys.argv[1])) :
-		polyid = long(row['Polygon Id'])
+		polyid = poly_id(row)
 		x = (float(row['X']) - min_x) * mult
 		y = (float(row['Y']) - min_y) * mult
 
