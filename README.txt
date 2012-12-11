@@ -5,12 +5,12 @@ This is for taking SHP files for GIS, exported from Shape Viewer (from shapeview
 Dependencies:
 
 * Python
-* svgcuts (https://github.com/eastein/svgcuts) 
+* svgcuts (https://github.com/eastein/svgcuts) - checked out into `~/git/svgcuts` presumably.
 
 # How To
 
     PYTHONPATH=../git:$PYTHONPATH python csv_map_writer.py ~/Desktop/Wards.csv
 
-
+This writes to `lol_map.svg`.
 
 This isn't perfect at all.  In fact, it's a mess.  If you care tell me so I make it nicer.
