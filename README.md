@@ -11,7 +11,7 @@ Dependencies:
 <A name="toc1-10" title="How To" />
 # How To
 
-    PYTHONPATH=../git:$PYTHONPATH python csv_map_writer.py ~/Desktop/Wards.csv
+    PYTHONPATH=~/git:$PYTHONPATH python csv_map_writer.py ~/Desktop/Wards.csv
 
 This writes to `lol_map.svg`.
 
